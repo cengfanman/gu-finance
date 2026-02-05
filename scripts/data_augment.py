@@ -150,7 +150,12 @@ def augment_sample(sample: Dict) -> List[Dict]:
     """对单条数据进行增强"""
     instruction = sample["instruction"]
     output = sample["output"]
-    intent = json.loads(output).get("intent", "")
+
+    # 安全解析 JSON
+    try:
+        intent = json.loads(output).get("intent", "")
+    except json.JSONDecodeError:
+        intent = ""
 
     augmented = [sample]  # 保留原始数据
 
