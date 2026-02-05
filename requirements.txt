@@ -1,0 +1,22 @@
+# Qwen 7B LoRA Fine-tuning Dependencies
+# For AutoDL 4090 24G
+
+# Core
+torch>=2.0.0
+transformers>=4.37.0
+datasets>=2.16.0
+accelerate>=0.25.0
+
+# LoRA / PEFT
+peft>=0.7.0
+
+# Quantization (optional, for memory saving)
+bitsandbytes>=0.41.0
+
+# Training utilities
+scipy
+scikit-learn
+
+# Logging (optional)
+# wandb
+# tensorboard

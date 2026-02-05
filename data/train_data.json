@@ -1,0 +1,852 @@
+[
+  {
+    "instruction": "什么是货币基金？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"货币基金主要投资于短期货币工具，如国债、央行票据、银行存款等，具有风险低、流动性好、门槛低的特点，适合存放闲置流动资金。\"}"
+  },
+  {
+    "instruction": "基金定投和一次性买入哪个好？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"定投适合普通投资者，可摊薄成本、淡化择时；一次性买入更适合对市场点位有判断、资金长期不用的投资者。\"}"
+  },
+  {
+    "instruction": "什么是ETF？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"ETF是交易型开放式指数基金，可以像股票一样在交易所买卖，同时追踪特定指数表现，兼具股票和基金的优点。\"}"
+  },
+  {
+    "instruction": "股票和基金有什么区别？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"股票是直接投资单一公司，风险集中；基金是集合投资多种资产，由专业人士管理，风险相对分散。\"}"
+  },
+  {
+    "instruction": "什么是债券？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"债券是发行人承诺按期支付利息并在到期日偿还本金的有价证券，包括国债、企业债、可转债等，通常风险低于股票。\"}"
+  },
+  {
+    "instruction": "什么是市盈率PE？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"市盈率PE=股价/每股收益，反映投资者愿意为每1元利润支付的价格，是衡量股票估值高低的重要指标。\"}"
+  },
+  {
+    "instruction": "什么是市净率PB？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"市净率PB=股价/每股净资产，反映股价相对于公司账面价值的溢价程度，常用于评估银行、地产等重资产行业。\"}"
+  },
+  {
+    "instruction": "什么是分红？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"分红是上市公司将部分利润以现金或股票形式分配给股东，现金分红会从股价中扣除等额金额（除息）。\"}"
+  },
+  {
+    "instruction": "什么是涨停和跌停？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"A股主板涨跌停幅度为10%，科创板和创业板为20%，ST股票为5%，达到涨跌停后当日不能继续交易超出该价格。\"}"
+  },
+  {
+    "instruction": "什么是融资融券？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"融资是向券商借钱买股票，融券是向券商借股票卖出，都属于杠杆交易，有一定门槛和风险，需要开通两融账户。\"}"
+  },
+  {
+    "instruction": "什么是北向资金？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"北向资金指通过沪港通、深港通从香港流入A股的境外资金，因资金从南向北流动而得名，常被视为外资风向标。\"}"
+  },
+  {
+    "instruction": "什么是量化交易？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"量化交易是利用数学模型和计算机程序进行交易决策，通过历史数据分析寻找规律，实现自动化交易。\"}"
+  },
+  {
+    "instruction": "什么是期权？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"期权是一种合约，赋予持有人在特定时间以特定价格买入或卖出标的资产的权利，分为认购期权和认沽期权。\"}"
+  },
+  {
+    "instruction": "什么是期货？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"期货是标准化合约，约定在未来某时以约定价格买卖特定商品或金融资产，具有杠杆效应，风险较高。\"}"
+  },
+  {
+    "instruction": "什么是可转债？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"可转债是可以转换为股票的债券，兼具债券的保底收益和股票的上涨潜力，T+0交易且无涨跌幅限制。\"}"
+  },
+  {
+    "instruction": "什么是REITs？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"REITs是不动产投资信托基金，将不动产资产证券化，投资者可通过购买份额间接投资房地产，获取租金收益分红。\"}"
+  },
+  {
+    "instruction": "什么是股息率？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"股息率=每股年度分红/当前股价，反映投资股票获得的现金回报率，高股息股票适合追求稳定收益的投资者。\"}"
+  },
+  {
+    "instruction": "什么是净值？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"基金净值是基金单位份额的价值，等于基金总资产减去负债后除以总份额，是买卖基金的计价依据。\"}"
+  },
+  {
+    "instruction": "什么是申购和赎回？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"申购是用现金买入基金份额，赎回是将基金份额卖出换回现金，通常按当日收盘后的净值计算。\"}"
+  },
+  {
+    "instruction": "什么是封闭期？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"封闭期是基金不接受申购赎回的期限，新基金成立后一般有不超过3个月的封闭期，部分定期开放基金封闭期更长。\"}"
+  },
+  {
+    "instruction": "什么是夏普比率？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"夏普比率=(投资收益率-无风险利率)/收益标准差，衡量每承担一单位风险获得的超额收益，数值越高性价比越好。\"}"
+  },
+  {
+    "instruction": "什么是最大回撤？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"最大回撤是指投资组合从最高点到最低点的最大跌幅，反映最坏情况下可能的损失程度，是重要的风险指标。\"}"
+  },
+  {
+    "instruction": "什么是阿尔法收益？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"阿尔法是投资组合超越基准指数的超额收益，代表基金经理的选股择时能力，是主动管理型基金追求的目标。\"}"
+  },
+  {
+    "instruction": "什么是贝塔系数？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"贝塔系数衡量投资组合相对于市场的波动程度，贝塔>1表示波动大于市场，贝塔<1表示波动小于市场。\"}"
+  },
+  {
+    "instruction": "什么是资产配置？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"资产配置是将资金分配到不同类型资产（股票、债券、现金等）的策略，目的是在风险可控前提下优化收益。\"}"
+  },
+  {
+    "instruction": "什么是复利效应？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"复利是利滚利，收益再投资产生新收益，时间越长效应越明显，是长期投资的核心优势。\"}"
+  },
+  {
+    "instruction": "什么是72法则？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"72法则是估算资产翻倍时间的简便方法：翻倍年数≈72÷年化收益率，如年化8%约需9年翻倍。\"}"
+  },
+  {
+    "instruction": "什么是止损？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"止损是设定亏损上限，当亏损达到预设比例时果断卖出，目的是控制单笔交易损失，保护本金。\"}"
+  },
+  {
+    "instruction": "什么是建仓？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"建仓是首次买入某只股票或基金，建立投资头寸，可以一次性建仓也可以分批建仓降低择时风险。\"}"
+  },
+  {
+    "instruction": "什么是加仓和减仓？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"加仓是增加已有持仓的数量，减仓是卖出部分持仓，根据市场变化和个人判断灵活调整仓位。\"}"
+  },
+  {
+    "instruction": "NVDA下周会不会涨？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"个股短期价格受市场情绪、资金、宏观政策等多重因素影响，无法精准预测，请理性投资。\"}"
+  },
+  {
+    "instruction": "英伟达股票未来走势怎么样？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"股票走势具有不确定性，任何预测都不构成投资建议，请理性看待市场波动。\"}"
+  },
+  {
+    "instruction": "AAPL以后能涨到多少？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"个股目标价格无法准确预测，投资需自主决策并承担对应风险。\"}"
+  },
+  {
+    "instruction": "特斯拉股票能买吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"是否买入需根据个人风险承受能力、投资目标综合判断，我无法提供具体买卖建议。\"}"
+  },
+  {
+    "instruction": "茅台还能涨吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"股票涨跌受多种因素影响，无法准确预测，请独立分析后做出投资决策。\"}"
+  },
+  {
+    "instruction": "腾讯股票值得长期持有吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"长期持有需考虑公司基本面、估值水平、行业前景等因素，建议做好功课后自主决策。\"}"
+  },
+  {
+    "instruction": "比亚迪会不会成为下一个特斯拉？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"公司未来发展存在不确定性，无法预测，投资需基于自身研究和判断。\"}"
+  },
+  {
+    "instruction": "现在是买入宁德时代的好时机吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"择时投资具有不确定性，我无法判断最佳买入时机，请根据自身情况独立决策。\"}"
+  },
+  {
+    "instruction": "中芯国际后市怎么看？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"股票后市走势受多重因素影响，无法预测，请谨慎投资，理性决策。\"}"
+  },
+  {
+    "instruction": "阿里巴巴股票能抄底吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"抄底存在风险，股价可能继续下跌，建议充分了解公司情况后再做投资决策。\"}"
+  },
+  {
+    "instruction": "哪只股票最有潜力？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"我无法推荐具体股票，投资需自行研究分析，选择符合自身风险偏好的标的。\"}"
+  },
+  {
+    "instruction": "明年A股会涨还是跌？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"股市涨跌受宏观经济、政策、资金等多因素影响，无法预测，请理性看待市场。\"}"
+  },
+  {
+    "instruction": "美股还会继续涨吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"股市走势具有不确定性，无法准确预测，投资需谨慎，做好风险管理。\"}"
+  },
+  {
+    "instruction": "港股什么时候能反弹？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"市场反弹时间无法预测，投资需有耐心，做好长期持有的准备。\"}"
+  },
+  {
+    "instruction": "创业板后面走势如何？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"指数走势受多重因素影响，无法精准预测，请根据自身风险承受能力配置资产。\"}"
+  },
+  {
+    "instruction": "科创板有投资价值吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"投资价值因人而异，科创板波动较大，适合风险承受能力较强的投资者。\"}"
+  },
+  {
+    "instruction": "黄金还会涨吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"黄金价格受美元、利率、避险情绪等影响，走势难以预测，请综合考虑后决策。\"}"
+  },
+  {
+    "instruction": "比特币能买吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"加密货币波动极大，风险很高，请充分了解风险后谨慎参与。\"}"
+  },
+  {
+    "instruction": "原油期货后市怎么看？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"商品期货价格受供需、地缘政治等多因素影响，无法预测，请谨慎投资。\"}"
+  },
+  {
+    "instruction": "人民币会贬值吗？",
+    "input": "",
+    "output": "{\"intent\":\"stock_prediction\",\"content\":\"汇率走势受经济基本面、货币政策等多因素影响，无法准确预测。\"}"
+  },
+  {
+    "instruction": "今天上海天气怎么样？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "明天下不下雨？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "北京气温多少度？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "深圳今天热不热？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "这周末天气好吗？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "杭州会下雪吗？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "今天适合出门吗？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "明天需要带伞吗？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气信息。\"}"
+  },
+  {
+    "instruction": "广州空气质量怎么样？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气和空气质量信息。\"}"
+  },
+  {
+    "instruction": "成都雾霾严重吗？",
+    "input": "",
+    "output": "{\"intent\":\"weather\",\"content\":\"抱歉，我是金融助手，无法查询天气和空气质量信息。\"}"
+  },
+  {
+    "instruction": "推荐一部电影",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，仅提供金融相关咨询服务。\"}"
+  },
+  {
+    "instruction": "怎么做西红柿炒蛋？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，仅提供金融相关咨询服务。\"}"
+  },
+  {
+    "instruction": "帮我写一首诗",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，仅提供金融相关咨询服务。\"}"
+  },
+  {
+    "instruction": "你会唱歌吗？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，仅提供金融相关咨询服务。\"}"
+  },
+  {
+    "instruction": "讲个笑话",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，仅提供金融相关咨询服务。\"}"
+  },
+  {
+    "instruction": "今天星期几？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法提供日期时间查询服务。\"}"
+  },
+  {
+    "instruction": "附近有什么好吃的？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法提供餐饮推荐服务。\"}"
+  },
+  {
+    "instruction": "帮我订个酒店",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法提供酒店预订服务。\"}"
+  },
+  {
+    "instruction": "怎么学英语？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，仅提供金融相关咨询服务。\"}"
+  },
+  {
+    "instruction": "帮我翻译一下",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法提供翻译服务。\"}"
+  },
+  {
+    "instruction": "你是谁？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"我是金融意图识别助手，专注于金融知识问答，但无法提供投资建议。\"}"
+  },
+  {
+    "instruction": "你能做什么？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"我可以回答金融基础知识问题，但无法预测股价或提供投资建议。\"}"
+  },
+  {
+    "instruction": "世界杯谁会赢？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法回答体育相关问题。\"}"
+  },
+  {
+    "instruction": "今天有什么新闻？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法提供新闻资讯服务。\"}"
+  },
+  {
+    "instruction": "怎么减肥？",
+    "input": "",
+    "output": "{\"intent\":\"other\",\"content\":\"抱歉，我是金融助手，无法提供健康饮食建议。\"}"
+  },
+  {
+    "instruction": "我想开户炒股，需要什么条件？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"A股开户需要年满18周岁，持有有效身份证件，可通过券商APP线上开户，一般当天或次日即可完成。\"}"
+  },
+  {
+    "instruction": "怎么开通科创板权限？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"科创板开通需满足：证券账户开立满2年，申请前20个交易日日均资产不低于50万元，可通过券商APP申请。\"}"
+  },
+  {
+    "instruction": "创业板开户有什么要求？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"创业板开通需满足：证券账户开立满2年或具备相应投资经验，申请前20个交易日日均资产不低于10万元。\"}"
+  },
+  {
+    "instruction": "港股通怎么开通？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"港股通开通需要：证券账户开立满20个交易日，申请前20个交易日日均资产不低于50万元，可通过券商办理。\"}"
+  },
+  {
+    "instruction": "融资融券开户条件是什么？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"两融开户需要：证券账户开立满6个月，申请前20个交易日日均资产不低于50万元，且具备相应风险承受能力。\"}"
+  },
+  {
+    "instruction": "期权账户怎么开？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"期权开户需要：证券账户开立满6个月，申请前20个交易日日均资产不低于50万元，通过期权知识测试，有模拟交易经验。\"}"
+  },
+  {
+    "instruction": "期货账户开户流程？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"期货开户可通过期货公司APP线上办理，需年满18周岁，准备身份证和银行卡，完成风险测评和视频认证。\"}"
+  },
+  {
+    "instruction": "如何修改交易密码？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"可通过券商APP的账户设置-安全中心修改交易密码，也可携带身份证到营业部柜台办理。\"}"
+  },
+  {
+    "instruction": "怎么绑定银行卡？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"可通过券商APP的银证转账功能绑定银行卡，首次绑定需输入银行卡号和银行预留手机号验证。\"}"
+  },
+  {
+    "instruction": "如何办理转户？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"股票转户需先在原券商办理转托管或撤销指定交易，再在新券商开户并指定交易，全程可线上办理。\"}"
+  },
+  {
+    "instruction": "如何查询我的持仓？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"可登录券商APP，在持仓或资产页面查看当前持有的股票、基金等证券及其市值和盈亏情况。\"}"
+  },
+  {
+    "instruction": "交易手续费怎么收？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"A股交易费用包括：佣金（一般万2-万3）、印花税（卖出时千分之一）、过户费（万0.1），具体以券商约定为准。\"}"
+  },
+  {
+    "instruction": "基金申购费率是多少？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"基金申购费率因产品和渠道不同，一般股票型基金申购费1.5%，但多数平台有1折优惠即0.15%。\"}"
+  },
+  {
+    "instruction": "怎么开通美股账户？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"可通过互联网券商如富途、老虎等开通美股账户，需准备身份证、银行卡，完成线上开户和入金。\"}"
+  },
+  {
+    "instruction": "如何办理销户？",
+    "input": "",
+    "output": "{\"intent\":\"account_service\",\"content\":\"证券销户可通过券商APP线上办理或到营业部柜台办理，需先清空账户资产和负债。\"}"
+  },
+  {
+    "instruction": "帮我查一下茅台的财报",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法实时查询数据，建议您通过券商APP、东方财富、同花顺等平台查看贵州茅台(600519)的财务报表。\"}"
+  },
+  {
+    "instruction": "腾讯现在股价多少？",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法获取实时行情，建议您通过券商APP或行情软件查看腾讯(00700.HK)的最新股价。\"}"
+  },
+  {
+    "instruction": "英伟达的市盈率是多少？",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法获取实时数据，建议您通过行情软件查看NVDA的最新市盈率估值。\"}"
+  },
+  {
+    "instruction": "沪深300今天涨了多少？",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法获取实时行情，建议您通过行情软件查看沪深300指数的最新涨跌幅。\"}"
+  },
+  {
+    "instruction": "北向资金今天流入多少？",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法获取实时数据，建议您通过东方财富、同花顺等平台查看今日北向资金流向。\"}"
+  },
+  {
+    "instruction": "查一下比亚迪的股东人数",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法查询实时数据，建议您通过券商APP或财经网站查看比亚迪(002594)的股东户数信息。\"}"
+  },
+  {
+    "instruction": "苹果公司的分红记录",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法查询历史数据，建议您通过雅虎财经或券商平台查看AAPL的历史分红记录。\"}"
+  },
+  {
+    "instruction": "中芯国际的研发费用是多少？",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法查询财务数据，建议您通过公司年报或财经平台查看中芯国际的研发费用明细。\"}"
+  },
+  {
+    "instruction": "今天涨停的股票有哪些？",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法获取实时行情，建议您通过同花顺、东方财富等平台查看今日涨停板股票列表。\"}"
+  },
+  {
+    "instruction": "查一下宁德时代的机构持仓",
+    "input": "",
+    "output": "{\"intent\":\"stock_query\",\"content\":\"我无法查询实时数据，建议您通过券商APP或天眼查等平台查看宁德时代的机构持仓情况。\"}"
+  },
+  {
+    "instruction": "美联储什么时候加息？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"美联储利率决议由FOMC会议决定，一年召开8次，具体日期可查询美联储官网，加息决策取决于通胀和就业数据。\"}"
+  },
+  {
+    "instruction": "CPI是什么意思？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"CPI是消费者物价指数，衡量居民消费品和服务价格变动程度，是判断通胀水平的重要指标。\"}"
+  },
+  {
+    "instruction": "GDP增速对股市有什么影响？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"GDP增速反映经济增长状况，增速上升通常利好股市，但股市还受流动性、估值等多因素影响。\"}"
+  },
+  {
+    "instruction": "什么是LPR？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"LPR是贷款市场报价利率，由18家报价行报价产生，是银行贷款定价的基准，分为1年期和5年期以上两个品种。\"}"
+  },
+  {
+    "instruction": "降准对股市有什么影响？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"降准释放银行可贷资金，增加市场流动性，通常被视为利好信号，但实际影响还需结合市场预期判断。\"}"
+  },
+  {
+    "instruction": "什么是量化宽松？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"量化宽松(QE)是央行通过购买债券等资产向市场注入流动性的非常规货币政策，常在利率接近零时使用。\"}"
+  },
+  {
+    "instruction": "美债收益率上升意味着什么？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"美债收益率上升意味着债券价格下跌，通常反映市场对经济增长或通胀的预期上升，可能压制高估值成长股。\"}"
+  },
+  {
+    "instruction": "什么是通货膨胀？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"通货膨胀是物价总水平持续上涨的现象，导致货币购买力下降，适度通胀有利经济，恶性通胀则有害。\"}"
+  },
+  {
+    "instruction": "什么是滞胀？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"滞胀是经济停滞与通货膨胀并存的状态，表现为经济增长乏力但物价持续上涨，是最难应对的经济困局。\"}"
+  },
+  {
+    "instruction": "PMI指数怎么看？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"PMI是采购经理人指数，50为荣枯线，高于50表示制造业扩张，低于50表示收缩，是经济先行指标。\"}"
+  },
+  {
+    "instruction": "什么是社融数据？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"社融是社会融资规模，反映实体经济从金融体系获得的资金总量，是衡量金融支持实体经济力度的重要指标。\"}"
+  },
+  {
+    "instruction": "M2增速代表什么？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"M2是广义货币供应量，包括现金、活期存款和定期存款等，M2增速反映货币政策松紧和市场流动性状况。\"}"
+  },
+  {
+    "instruction": "什么是财政政策？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"财政政策是政府通过调整税收和支出来影响经济的手段，扩张性财政政策增加支出刺激经济，紧缩性则相反。\"}"
+  },
+  {
+    "instruction": "美元指数上涨对A股有影响吗？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"美元走强通常导致资金回流美国，新兴市场承压，但A股受影响程度还取决于国内政策和经济基本面。\"}"
+  },
+  {
+    "instruction": "什么是衰退？",
+    "input": "",
+    "output": "{\"intent\":\"macro_economy\",\"content\":\"经济衰退通常定义为GDP连续两个季度负增长，表现为产出下降、失业上升、企业盈利下滑。\"}"
+  },
+  {
+    "instruction": "国债逆回购怎么买？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"通过证券账户即可购买，在交易软件搜索逆回购，选择期限品种如GC001，输入金额后卖出（借出资金），到期自动回款。\"}"
+  },
+  {
+    "instruction": "新手买什么基金比较好？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"新手建议从宽基指数基金开始，如沪深300、中证500ETF，费率低、透明度高，可通过定投方式参与。\"}"
+  },
+  {
+    "instruction": "如何挑选基金经理？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"可关注任职年限（建议3年以上）、历史业绩、最大回撤、投资风格稳定性等指标，避免只看短期排名。\"}"
+  },
+  {
+    "instruction": "定投频率选周还是月？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"周定投和月定投长期收益差异不大，周定投平滑效果略好，月定投操作更简便，可根据资金到账周期选择。\"}"
+  },
+  {
+    "instruction": "可转债打新怎么操作？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"开通可转债权限后，在券商APP的新债申购页面顶格申购即可，中签后按时缴款，上市后可择机卖出。\"}"
+  },
+  {
+    "instruction": "如何判断基金是否值得买？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"可从长期业绩、夏普比率、最大回撤、基金规模、费率、基金经理等多维度综合评估，不要只看短期涨幅。\"}"
+  },
+  {
+    "instruction": "分散投资要怎么做？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"分散投资可从资产类别（股票、债券、商品）、地区（A股、港股、美股）、行业、风格等维度进行配置。\"}"
+  },
+  {
+    "instruction": "长期投资选什么品种？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"长期投资可考虑宽基指数基金、优质主动基金、高股息蓝筹股等，关键是选择自己能坚持持有的品种。\"}"
+  },
+  {
+    "instruction": "如何设置止盈止损？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"止盈止损比例因人而异，一般可设置15-30%止盈、10-15%止损，也可采用目标收益法或估值法动态调整。\"}"
+  },
+  {
+    "instruction": "ETF和普通基金哪个好？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"ETF费率更低、交易灵活，适合有一定经验的投资者；普通基金申赎方便，定投更便捷，适合新手。\"}"
+  },
+  {
+    "instruction": "买债券基金安全吗？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"债券基金风险低于股票基金，但也存在利率风险和信用风险，纯债基金相对更稳健，可作为资产配置的一部分。\"}"
+  },
+  {
+    "instruction": "QDII基金适合谁买？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"QDII基金投资海外市场，适合希望配置境外资产、分散单一市场风险的投资者，需注意汇率波动影响。\"}"
+  },
+  {
+    "instruction": "打新股需要什么条件？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"A股打新需持有对应市场市值，沪市每1万元市值可申购1个号，深市每5000元可申购1个号，T-2日计算。\"}"
+  },
+  {
+    "instruction": "港股和A股交易有什么区别？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"港股T+0交易、无涨跌停限制、可做空，交易时间不同，最小交易单位按手（每手股数不同），需注意更大波动风险。\"}"
+  },
+  {
+    "instruction": "美股交易时间是几点？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"美股常规交易时间为美东时间9:30-16:00，对应北京时间22:30-次日5:00（夏令时）或23:30-次日6:00（冬令时）。\"}"
+  },
+  {
+    "instruction": "投资股票有哪些风险？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"股票投资风险包括：市场风险、个股风险、流动性风险、政策风险等，投资前需充分了解并做好风险承受准备。\"}"
+  },
+  {
+    "instruction": "杠杆交易风险大吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"杠杆交易会放大收益也会放大亏损，可能出现爆仓风险，普通投资者应谨慎参与，做好风险管理。\"}"
+  },
+  {
+    "instruction": "期货为什么风险高？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"期货采用保证金制度，杠杆较高，价格波动剧烈，存在爆仓风险，且需要较强的专业知识和风险管理能力。\"}"
+  },
+  {
+    "instruction": "虚拟货币投资靠谱吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"虚拟货币波动极大，缺乏监管保护，存在较高的投机和欺诈风险，请充分了解风险后谨慎参与。\"}"
+  },
+  {
+    "instruction": "P2P理财还能投吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"P2P网贷行业已全面清退，目前合规的P2P平台已不存在，请远离任何打着P2P旗号的非法集资。\"}"
+  },
+  {
+    "instruction": "高收益理财产品可信吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"高收益必然伴随高风险，承诺保本高息的产品可能是非法集资，请警惕任何异常高收益的理财产品。\"}"
+  },
+  {
+    "instruction": "场外配资合法吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"场外配资属于违法违规行为，存在极高风险，可能导致血本无归，请通过正规渠道进行投资。\"}"
+  },
+  {
+    "instruction": "买原始股有风险吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"市面上多数\"原始股\"是非法集资骗局，真正的原始股交易有严格限制，请警惕以高回报为诱饵的原始股陷阱。\"}"
+  },
+  {
+    "instruction": "外汇保证金交易安全吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"国内未批准任何机构开展外汇保证金交易，网上外汇平台多为非法，资金安全无保障，请谨慎参与。\"}"
+  },
+  {
+    "instruction": "投资亏损了怎么办？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"投资亏损要冷静分析原因，避免情绪化操作，必要时可止损控制损失，同时反思调整投资策略。\"}"
+  },
+  {
+    "instruction": "什么是庞氏骗局？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"庞氏骗局是用新投资者的钱支付老投资者回报的诈骗方式，特征是高额固定回报、拉人头奖励，最终必然崩盘。\"}"
+  },
+  {
+    "instruction": "如何识别金融诈骗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"警惕高收益低风险承诺、保本保息、内幕消息、拉人头奖励等特征，正规投资需通过持牌机构进行。\"}"
+  },
+  {
+    "instruction": "股票退市了钱怎么办？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"退市后股票转至三板市场交易，流动性极差，价格大幅缩水，应在退市风险警示阶段及时止损离场。\"}"
+  },
+  {
+    "instruction": "基金清盘会怎样？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"基金清盘时会按净值将剩余资产返还给持有人，本金一般不会完全损失，但可能已有较大浮亏。\"}"
+  },
+  {
+    "instruction": "跟着大V炒股靠谱吗？",
+    "input": "",
+    "output": "{\"intent\":\"risk_warning\",\"content\":\"网络大V资质难辨，部分可能是非法荐股，跟风操作风险自担，投资决策应独立思考，不盲目跟随。\"}"
+  },
+  {
+    "instruction": "股市开盘时间是几点？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"A股交易时间为工作日9:30-11:30、13:00-15:00，9:15-9:25为集合竞价时间，9:25-9:30只能挂单不能撤单。\"}"
+  },
+  {
+    "instruction": "T+1是什么意思？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"T+1指当天买入的股票次日才能卖出，A股主板实行T+1制度，港股美股实行T+0可当日买卖。\"}"
+  },
+  {
+    "instruction": "什么是蓝筹股？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"蓝筹股指规模大、业绩稳定、分红持续的优质上市公司股票，如银行、保险、白酒龙头等，通常波动较小。\"}"
+  },
+  {
+    "instruction": "什么是题材股？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"题材股是具有某种炒作概念或热点题材的股票，如AI、新能源等，往往短期波动较大，投机性较强。\"}"
+  },
+  {
+    "instruction": "什么是ST股票？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"ST股票是被实施退市风险警示的股票，因连续亏损或其他问题被标注，涨跌幅限制为5%，投资风险较高。\"}"
+  },
+  {
+    "instruction": "什么是集合竞价？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"集合竞价是开盘前和收盘前的特殊交易阶段，买卖双方报价后系统按最大成交量原则确定开盘价或收盘价。\"}"
+  },
+  {
+    "instruction": "什么是限价单和市价单？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"限价单指定价格成交，价格优先但可能无法成交；市价单按当前最优价立即成交，成交优先但价格可能滑点。\"}"
+  },
+  {
+    "instruction": "什么是除权除息？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"除权是送转股后股价按比例下调，除息是现金分红后股价扣除分红金额，除权除息日股价会自动调整。\"}"
+  },
+  {
+    "instruction": "什么是股票回购？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"股票回购是上市公司用自有资金买回已发行的股票，可减少流通股数量，通常被视为公司看好自身价值的信号。\"}"
+  },
+  {
+    "instruction": "什么是做空？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"做空是先借入股票卖出，待价格下跌后买回归还的操作，从下跌中获利，A股需通过融券或期权实现做空。\"}"
+  },
+  {
+    "instruction": "什么是对冲？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"对冲是通过建立相反方向的头寸来降低投资组合风险，如持有股票同时买入认沽期权，锁定下跌风险。\"}"
+  },
+  {
+    "instruction": "什么是套利？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"套利是利用不同市场或品种间的价格差异获取无风险收益的交易策略，如ETF折溢价套利、跨市场套利等。\"}"
+  },
+  {
+    "instruction": "什么是私募基金？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"私募基金是向合格投资者非公开募集的基金，投资门槛通常100万起，策略灵活但流动性和透明度较低。\"}"
+  },
+  {
+    "instruction": "什么是FOF基金？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"FOF是基金中的基金，投资标的是其他基金而非股票债券，通过组合多只基金实现二次分散风险。\"}"
+  },
+  {
+    "instruction": "什么是年化收益率？",
+    "input": "",
+    "output": "{\"intent\":\"finance_knowledge\",\"content\":\"年化收益率是将任意周期收益率换算为一年的收益率，便于不同期限产品横向比较，计算时考虑复利效应。\"}"
+  },
+  {
+    "instruction": "投资理财从哪里入手？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"建议先建立应急资金（3-6个月支出），再从低风险产品如货币基金、国债开始，逐步学习后再配置权益资产。\"}"
+  },
+  {
+    "instruction": "月入5000怎么理财？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"建议先留足生活费和应急金，剩余资金可定投宽基指数基金，积少成多，坚持长期投资。\"}"
+  },
+  {
+    "instruction": "工资到账怎么管理？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"可采用分账管理：生活费留活期、应急金存货币基金、投资金定投基金，养成先储蓄后消费的习惯。\"}"
+  },
+  {
+    "instruction": "闲钱放哪里收益高又安全？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"短期闲钱可放货币基金或国债逆回购，中长期可考虑银行大额存单、债券基金，兼顾安全性和收益。\"}"
+  },
+  {
+    "instruction": "如何构建投资组合？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"可按风险承受能力配置：保守型以债券为主，均衡型股债五五开，进取型权益资产为主，并定期再平衡。\"}"
+  },
+  {
+    "instruction": "基金亏损要不要加仓？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"是否加仓需判断亏损原因，若基本面未变、估值合理可考虑逐步加仓摊薄成本，但要控制单只基金仓位。\"}"
+  },
+  {
+    "instruction": "基金赚钱了要不要赎回？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"可根据目标收益率或估值水平决定，达到预期可分批止盈，也可采用收益再投资策略享受复利增长。\"}"
+  },
+  {
+    "instruction": "买基金要看什么指标？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"重点关注长期业绩（3-5年）、最大回撤、夏普比率、基金规模、持仓集中度、基金经理稳定性等指标。\"}"
+  },
+  {
+    "instruction": "怎么判断基金经理水平？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"看任职年限（建议5年以上）、不同市场环境下的业绩、超额收益稳定性、换手率、持仓风格是否一致等。\"}"
+  },
+  {
+    "instruction": "同类基金怎么选？",
+    "input": "",
+    "output": "{\"intent\":\"investment_guide\",\"content\":\"比较长期业绩排名、风险调整后收益、规模适中（不宜过大过小）、费率、基金公司实力等综合因素。\"}"
+  }
+]
