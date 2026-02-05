@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  finance-intent-api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: finance-intent-api:latest
+    container_name: finance-intent-api
+    ports:
+      - "8000:8000"
+    environment:
+      - BASE_MODEL=Qwen/Qwen2.5-7B-Instruct
+      - LORA_PATH=/app/models/qwen-finance-intent
+      - HF_ENDPOINT=https://hf-mirror.com
+      - TRANSFORMERS_CACHE=/app/cache
+    volumes:
+      - model-cache:/app/cache
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  model-cache:
